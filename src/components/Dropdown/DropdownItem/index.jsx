@@ -4,7 +4,7 @@ import './dropdownitem.css'
 
 function DropdownItem(props) {
   return (
-    <li onClick={props.func}>
+    <li onClick={props.onClick}>
       <a href='#' className='menu-item'>
         {props.children}
       </a>

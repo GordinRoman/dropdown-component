@@ -5,23 +5,28 @@ import './dropdown.css'
 
 function Dropdown(props) {
   const [open, setOpen] = useState(false)
-  const toggle = () => setOpen(!open)
 
   return (
     <li className='dd-item'>
-      <a href='#' className='dd-icon' onClick={() => toggle(!open)}>
+      <a href='#' className='dd-icon' onClick={() => setOpen(!open)}>
         {!open && props.icon}
         {open && props.altIcon}
       </a>
       {open && (
         <>
-          <div className='bg' onClick={() => toggle(!open)}></div>
+          <div className='bg' onClick={() => setOpen(!open)}></div>
           <div className='dropdown'>
             <ul className='dropdown-nav'>
-              <DropdownItem func={() => toggle(!open)}>Account</DropdownItem>
-              <DropdownItem func={() => toggle(!open)}>History</DropdownItem>
-              <DropdownItem func={() => toggle(!open)}>About</DropdownItem>
-              <DropdownItem func={() => toggle(!open)}>Sign Out</DropdownItem>
+              <DropdownItem onClick={() => setOpen(!open)}>
+                Account
+              </DropdownItem>
+              <DropdownItem onClick={() => setOpen(!open)}>
+                History
+              </DropdownItem>
+              <DropdownItem onClick={() => setOpen(!open)}>About</DropdownItem>
+              <DropdownItem onClick={() => setOpen(!open)}>
+                Sign Out
+              </DropdownItem>
             </ul>
           </div>
         </>

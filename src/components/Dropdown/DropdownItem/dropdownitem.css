@@ -3,13 +3,22 @@
   src: url('../../../fonts/GT-Cinetype-Light.ttf');
 }
 .menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 34px;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
   font: 300 16px G TCinetype-light;
   text-align: left;
   transition: color 300ms;
   user-select: none;
+  width: 100%;
 }
 .menu-item:hover {
   color: rgba(255, 255, 255, 1);
+}
+li {
+  display: flex;
+  width: 100%;
 }
